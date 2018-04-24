@@ -15,7 +15,9 @@ class BreadcrumbsHelper extends CakeBreadcrumbsHelper
     protected $_defaultConfig = [
         'templates' => [
             'wrapper' => '<ol{{attrs}}>{{content}}</ol>',
+            'item' => '<li{{attrs}}><a href="{{url}}"{{innerAttrs}}>{{title}}</a></li>{{separator}}',
             'itemWithoutLink' => '<li{{attrs}}>{{title}}</li>{{separator}}',
+            'separator' => '<li{{attrs}}><span{{innerAttrs}}>{{separator}}</span></li>'
         ]
     ];
 
