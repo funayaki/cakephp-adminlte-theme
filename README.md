@@ -38,6 +38,7 @@ public function beforeRender(Event $event)
 
 public function initialize()
 {
+    $this->loadHelper('Breadcrumbs', ['className' => 'AdminLTE.Breadcrumbs']);
     $this->loadHelper('Form', ['className' => 'AdminLTE.Form']);
 }
 ```
