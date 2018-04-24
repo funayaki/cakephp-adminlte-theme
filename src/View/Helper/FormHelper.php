@@ -3,9 +3,7 @@
 namespace AdminLTE\View\Helper;
 
 use Cake\View\Helper\FormHelper as CakeFormHelper;
-use Cake\Utility\Hash;
 use Cake\View\View;
-use Cake\Utility\Inflector;
 
 class FormHelper extends CakeFormHelper
 {
