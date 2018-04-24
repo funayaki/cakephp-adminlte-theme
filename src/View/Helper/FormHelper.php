@@ -3,11 +3,10 @@
 namespace AdminLTE\View\Helper;
 
 use Cake\View\Helper\FormHelper as CakeFormHelper;
-use Cake\Utility\Hash;
 use Cake\View\View;
-use Cake\Utility\Inflector;
 
-class FormHelper extends CakeFormHelper {
+class FormHelper extends CakeFormHelper
+{
 
     private $templates = [
         'button' => '{{before}}<button{{attrs}}>{{text}}</button>{{after}}',
@@ -71,14 +70,13 @@ class FormHelper extends CakeFormHelper {
 
     public function input($fieldName, array $options = [])
     {
-
         $_options = [];
 
         if (!isset($options['type'])) {
             $options['type'] = $this->_inputType($fieldName, $options);
         }
 
-        switch($options['type']) {
+        switch ($options['type']) {
             case 'checkbox':
             case 'radio':
             case 'date':
@@ -93,28 +91,28 @@ class FormHelper extends CakeFormHelper {
 
         return parent::input($fieldName, $options);
     }
-	public function control($fieldName, array $options = [])
-	{
-		
-		$_options = [];
-		
-		if (!isset($options['type'])) {
-			$options['type'] = $this->_inputType($fieldName, $options);
-		}
-		
-		switch($options['type']) {
-			case 'checkbox':
-			case 'radio':
-			case 'date':
-				break;
-			default:
-				$_options = ['class' => 'form-control'];
-				break;
-			
-		}
-		
-		$options += $_options;
-		
-		return parent::control($fieldName, $options);
-	}
+
+    public function control($fieldName, array $options = [])
+    {
+        $_options = [];
+
+        if (!isset($options['type'])) {
+            $options['type'] = $this->_inputType($fieldName, $options);
+        }
+
+        switch ($options['type']) {
+            case 'checkbox':
+            case 'radio':
+            case 'date':
+                break;
+            default:
+                $_options = ['class' => 'form-control'];
+                break;
+
+        }
+
+        $options += $_options;
+
+        return parent::control($fieldName, $options);
+    }
 }
