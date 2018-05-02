@@ -74,7 +74,7 @@ use Cake\Utility\Inflector;
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            <?= $this->Form->button(__('Save')) ?>
+            <?= $this->Form->button(__('Submit')) ?>
           </div>
         <?= $this->Form->end() ?>
       </div>
