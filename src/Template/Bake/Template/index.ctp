@@ -7,13 +7,7 @@ $fields = collection($fields)
   })
   ->take(7);
 %>
-<!-- Content Header (Page header) -->
-<section class="content-header">
-  <h1>
-    <%= $pluralHumanName %>
-    <div class="pull-right"><?= $this->Html->link(__('New'), ['action' => 'add'], ['class'=>'btn btn-success btn-xs']) ?></div>
-  </h1>
-</section>
+<?php $this->Breadcrumbs->add('<%= $pluralHumanName %>'); ?>
 
 <div class="row">
   <div class="col-xs-12">
