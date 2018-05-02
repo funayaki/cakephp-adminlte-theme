@@ -5,7 +5,7 @@
 You can install using [composer](http://getcomposer.org).
 
 ```
-composer require maiconpinto/cakephp-adminlte-theme
+composer require funayaki/cakephp-adminlte-theme
 ```
 
 ### Enable Plugin
