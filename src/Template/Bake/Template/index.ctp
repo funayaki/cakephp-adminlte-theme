@@ -7,13 +7,15 @@ $fields = collection($fields)
   })
   ->take(7);
 %>
-<?php $this->Breadcrumbs->add('<%= $pluralHumanName %>'); ?>
+<?php $this->assign('subtitle', '<%= Inflector::humanize($action) %>'); ?>
+
+<?php $this->Breadcrumbs->add(__('<%= $pluralHumanName %>')); ?>
 
 <div class="row">
   <div class="col-xs-12">
     <div class="box">
       <div class="box-header">
-        <h3 class="box-title"><%= $pluralHumanName %></h3>
+        <h3 class="box-title"><?= __('<%= $pluralHumanName %>') ?></h3>
       </div>
       <!-- /.box-header -->
       <div class="box-body table-responsive">
