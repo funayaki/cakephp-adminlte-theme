@@ -38,16 +38,10 @@ $groupedFields = collection($fields)
 $groupedFields += ['number' => [], 'string' => [], 'boolean' => [], 'date' => [], 'text' => []];
 $pk = "\$$singularVar->{$primaryKey[0]}";
 %>
-<section class="content-header">
-  <h1>
-    <?php echo __('<%= $singularHumanName %>'); ?>
-  </h1>
-  <ol class="breadcrumb">
-    <li>
-    <?= $this->Html->link('<i class="fa fa-dashboard"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
-    </li>
-  </ol>
-</section>
+<?php $this->assign('subtitle', '<%= Inflector::humanize($action) %>'); ?>
+
+<?php $this->Breadcrumbs->add(__('<%= $pluralHumanName %>'), ['action' => 'index']); ?>
+<?php $this->Breadcrumbs->add(__('<%= Inflector::humanize($action) %>')); ?>
 
 <!-- Main content -->
 <section class="content">
