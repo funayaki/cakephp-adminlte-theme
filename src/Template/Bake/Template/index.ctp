@@ -21,17 +21,7 @@ $fields = collection($fields)
     <div class="col-xs-12">
       <div class="box">
         <div class="box-header">
-          <h3 class="box-title"><?= __('List of') ?> <%= $pluralHumanName %></h3>
-          <div class="box-tools">
-            <form action="<?php echo $this->Url->build(); ?>" method="POST">
-              <div class="input-group input-group-sm"  style="width: 180px;">
-                <input type="text" name="search" class="form-control" placeholder="<?= __('Fill in to start search') ?>">
-                <span class="input-group-btn">
-                <button class="btn btn-info btn-flat" type="submit"><?= __('Filter') ?></button>
-                </span>
-              </div>
-            </form>
-          </div>
+          <h3 class="box-title"><%= $pluralHumanName %></h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body table-responsive no-padding">
