@@ -3,17 +3,10 @@ use Cake\Utility\Inflector;
 
    $extras = [];
 %>
-<section class="content-header">
-  <h1>
-    <%= $singularHumanName %>
-    <small><?= __('<%= Inflector::humanize($action) %>') ?></small>
-  </h1>
-  <ol class="breadcrumb">
-    <li>
-    <?= $this->Html->link('<i class="fa fa-dashboard"></i> '.__('Back'), ['action' => 'index'], ['escape' => false]) ?>
-    </li>
-  </ol>
-</section>
+<?php $this->assign('subtitle', '<%= Inflector::humanize($action) %>'); ?>
+
+<?php $this->Breadcrumbs->add(__('<%= $pluralHumanName %>'), ['action' => 'index']); ?>
+<?php $this->Breadcrumbs->add(__('<%= Inflector::humanize($action) %>')); ?>
 
 <!-- Main content -->
 <section class="content">
