@@ -43,8 +43,6 @@ $pk = "\$$singularVar->{$primaryKey[0]}";
 <?php $this->Breadcrumbs->add(__('<%= $pluralHumanName %>'), ['action' => 'index']); ?>
 <?php $this->Breadcrumbs->add(__('<%= Inflector::humanize($action) %>')); ?>
 
-<!-- Main content -->
-<section class="content">
 <div class="row">
     <div class="col-md-12">
         <div class="box box-solid">
@@ -199,4 +197,3 @@ foreach ($relations as $alias => $details):
         </div>
     </div>
 <% endforeach; %>
-</section>
